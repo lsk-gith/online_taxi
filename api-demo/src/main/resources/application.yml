@@ -1,0 +1,16 @@
+
+server:
+  port: 8080
+spring:
+  output:
+    ansi:
+      enabled: always
+#logging:
+#  file:
+#    name: my.log
+#    path: ./log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 20MB
+#  pattern:
+#    level: user:%X{user} %5p
