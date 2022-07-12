@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/api-driver/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/service-verification-code/pom.xml" />
+        <option value="$PROJECT_DIR$/service-order/pom.xml" />
       </list>
     </option>
   </component>

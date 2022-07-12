@@ -31,6 +31,8 @@ public class RestTemplateRequestServiceImpl implements RestTemplateRequestServic
 
     @Override
     public String grabOrder(int orderId, int driverId) {
+        //又调用了一个服务
+        //"http://service-order/grab/do/orderId?driverId=driverId"
         String url = HttpUrlConstants.SERVICE_ORDER_URL + "/grab/do/"+orderId+"?driverId="+driverId;
         return restTemplate.getForEntity(url,String.class).getBody();
     }
