@@ -6,6 +6,7 @@ import com.lsk.serviceorder.Lock.MysqlLock;
 import com.lsk.serviceorder.service.GrabService;
 import com.lsk.serviceorder.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @Auther: lsk
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Description: com.lsk.serviceorder.service.Impl
  * @version: 1.0
  */
+@Service("grabMysqlLockService")
 public class GrabMysqlLockServiceImpl implements GrabService {
     @Autowired
     private MysqlLock lock;
