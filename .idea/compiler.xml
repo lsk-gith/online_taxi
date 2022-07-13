@@ -8,15 +8,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-verification-code" />
+        <module name="api-passager" />
         <module name="common" />
-        <module name="service-order" />
         <module name="api-demo" />
+        <module name="api-listen-order" />
+        <module name="service-order" />
         <module name="api-driver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-demo" target="1.8" />
       <module name="api-driver" target="1.8" />
+      <module name="api-listen-order" target="1.8" />
+      <module name="api-passager" target="1.8" />
       <module name="common" target="1.8" />
       <module name="online-taxi" target="1.8" />
       <module name="service-order" target="1.8" />
@@ -27,6 +31,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-demo" options="-parameters" />
       <module name="api-driver" options="-parameters" />
+      <module name="api-listen-order" options="-parameters" />
+      <module name="api-passager" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="online-taxi" options="-parameters" />
       <module name="service-order" options="-parameters" />
