@@ -49,7 +49,7 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
         String key = keyPre + phoneNumber;
         BoundValueOperations<String, String> codeRedis = redisTemplate.boundValueOps(key);
         String redisCode = codeRedis.get();
-        if(StringUtils.isNotBlank(redisCode)&& StringUtils.isNotBlank(redisCode)
+        if(StringUtils.isNotBlank(code)&& StringUtils.isNotBlank(redisCode)
                 && code.trim().equals(redisCode.trim()))
             return ResponseResult.success("");
         else {

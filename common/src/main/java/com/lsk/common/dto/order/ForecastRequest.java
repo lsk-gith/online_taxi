@@ -7,4 +7,7 @@ package com.lsk.common.dto.order;
  * @version: 1.0
  */
 public class ForecastRequest extends BaseOrder{
+    public ForecastRequest() {
+    }
+
 }
