@@ -10,33 +10,42 @@
         <module name="service-verification-code" />
         <module name="api-passager" />
         <module name="common" />
+        <module name="test" />
         <module name="api-demo" />
         <module name="api-listen-order" />
         <module name="service-order" />
+        <module name="account-service" />
+        <module name="internal-service" />
         <module name="api-driver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="account-service" target="1.8" />
       <module name="api-demo" target="1.8" />
       <module name="api-driver" target="1.8" />
       <module name="api-listen-order" target="1.8" />
       <module name="api-passager" target="1.8" />
       <module name="common" target="1.8" />
-      <module name="online-taxi" target="1.8" />
+      <module name="internal-service" target="1.8" />
+      <module name="online-taxi-my" target="1.8" />
       <module name="service-order" target="1.8" />
       <module name="service-verification-code" target="1.8" />
+      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-service" options="-parameters" />
       <module name="api-demo" options="-parameters" />
       <module name="api-driver" options="-parameters" />
       <module name="api-listen-order" options="-parameters" />
       <module name="api-passager" options="-parameters" />
       <module name="common" options="-parameters" />
-      <module name="online-taxi" options="-parameters" />
+      <module name="internal-service" options="-parameters" />
+      <module name="online-taxi-my" options="-parameters" />
       <module name="service-order" options="-parameters" />
       <module name="service-verification-code" options="-parameters" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>

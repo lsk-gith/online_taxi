@@ -1,0 +1,371 @@
+2022-07-16 22:32:07,296 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 15620 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 22:32:07,298 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 22:32:07,298 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 22:32:08,588 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 22:32:08,589 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 22:32:08,636 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-07-16 22:32:09,488 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 22:32:09,493 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:32:09,494 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 22:32:09,494 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 22:32:09,575 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 22:32:09,575 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2187 ms
+2022-07-16 22:32:10,014 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 22:32:10,144 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 22:32:10,458 | WARN | main | org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext | (AbstractApplicationContext.java:591)- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2022-07-16 22:32:10,461 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 22:32:10,505 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Stopping service [Tomcat]
+2022-07-16 22:32:10,511 | INFO | main | org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener | (ConditionEvaluationReportLoggingListener.java:136)- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-16 22:32:10,568 | ERROR | main | org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter | (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration
+└──<-──┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2022-07-16 22:32:53,041 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 2960 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 22:32:53,042 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 22:32:53,043 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 22:32:53,380 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 22:32:53,381 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 22:32:53,392 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-07-16 22:32:53,643 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 22:32:53,648 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:32:53,648 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 22:32:53,648 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 22:32:53,725 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 22:32:53,725 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 662 ms
+2022-07-16 22:32:53,904 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 22:32:54,036 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 22:32:54,221 | WARN | main | org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext | (AbstractApplicationContext.java:591)- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2022-07-16 22:32:54,225 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 22:32:54,234 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Stopping service [Tomcat]
+2022-07-16 22:32:54,241 | INFO | main | org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener | (ConditionEvaluationReportLoggingListener.java:136)- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-16 22:32:54,252 | ERROR | main | org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter | (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration
+└──<-──┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2022-07-16 22:37:33,489 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 7636 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 22:37:33,490 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 22:37:33,491 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 22:37:33,824 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 22:37:33,825 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 22:37:33,835 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-07-16 22:37:34,088 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 22:37:34,093 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:37:34,093 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 22:37:34,093 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 22:37:34,159 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 22:37:34,159 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 649 ms
+2022-07-16 22:37:34,338 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 22:37:34,461 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 22:37:35,336 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:37:35,358 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:220)- Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-16 22:37:35,366 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:61)- Started AccountServiceApplication in 2.104 seconds (JVM running for 2.44)
+2022-07-16 22:42:06,575 | INFO | http-nio-8081-exec-1 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 22:42:06,575 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-07-16 22:42:06,576 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2022-07-16 22:42:06,600 | WARN | http-nio-8081-exec-1 | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver | (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-07-16 22:42:39,820 | WARN | http-nio-8081-exec-3 | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver | (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-07-16 22:42:40,594 | WARN | http-nio-8081-exec-4 | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver | (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-07-16 22:43:02,205 | ERROR | http-nio-8081-exec-5 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.255:6379] with root cause
+java.net.BindException: Cannot assign requested address: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 22:55:32,323 | ERROR | http-nio-8081-exec-7 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.255:6379] with root cause
+java.net.BindException: Cannot assign requested address: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 22:55:33,621 | ERROR | http-nio-8081-exec-9 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.255:6379] with root cause
+java.net.BindException: Cannot assign requested address: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 22:57:54,325 | INFO | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 22:57:56,899 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 6960 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 22:57:56,901 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 22:57:56,901 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 22:57:57,250 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 22:57:57,251 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 22:57:57,262 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-07-16 22:57:57,516 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 22:57:57,521 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:57:57,522 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 22:57:57,522 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 22:57:57,588 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 22:57:57,588 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 666 ms
+2022-07-16 22:57:57,772 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 22:57:57,901 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 22:57:58,215 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8081"]
+2022-07-16 22:57:58,224 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:220)- Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-16 22:57:58,230 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:61)- Started AccountServiceApplication in 1.568 seconds (JVM running for 1.934)
+2022-07-16 22:58:51,036 | INFO | http-nio-8081-exec-3 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 22:58:51,036 | INFO | http-nio-8081-exec-3 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-07-16 22:58:51,037 | INFO | http-nio-8081-exec-3 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2022-07-16 22:58:51,891 | ERROR | http-nio-8081-exec-3 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:00:55,920 | ERROR | http-nio-8081-exec-4 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:00:57,242 | ERROR | http-nio-8081-exec-6 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:00:58,534 | ERROR | http-nio-8081-exec-8 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:02:18,010 | INFO | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 23:02:20,954 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 19208 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 23:02:20,956 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 23:02:20,956 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 23:02:21,297 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 23:02:21,298 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 23:02:21,309 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-07-16 23:02:21,562 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 23:02:21,566 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:02:21,567 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 23:02:21,567 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 23:02:21,637 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 23:02:21,637 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 660 ms
+2022-07-16 23:02:21,812 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 23:02:21,937 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 23:02:22,238 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:02:22,247 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:220)- Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-16 23:02:22,252 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:61)- Started AccountServiceApplication in 1.528 seconds (JVM running for 1.868)
+2022-07-16 23:02:41,552 | INFO | http-nio-8081-exec-1 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 23:02:41,552 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-07-16 23:02:41,553 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2022-07-16 23:02:42,021 | ERROR | http-nio-8081-exec-1 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:07:27,983 | ERROR | http-nio-8081-exec-4 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+io.lettuce.core.RedisConnectionException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+	at io.lettuce.core.protocol.CommandHandler.onProtectedMode(CommandHandler.java:884)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:671)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:598)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:11:58,596 | ERROR | http-nio-8081-exec-3 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] | (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.224.66:6379] with root cause
+io.lettuce.core.RedisConnectionException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+	at io.lettuce.core.protocol.CommandHandler.onProtectedMode(CommandHandler.java:884)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:671)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:598)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-16 23:19:59,109 | INFO | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 23:20:05,697 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 20684 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 23:20:05,700 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 23:20:05,700 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 23:20:06,058 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 23:20:06,059 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 23:20:06,070 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-07-16 23:20:06,351 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 23:20:06,356 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:20:06,357 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 23:20:06,357 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 23:20:06,460 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 23:20:06,461 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 738 ms
+2022-07-16 23:20:06,692 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 23:20:06,824 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 23:20:07,132 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:20:07,141 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:220)- Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-16 23:20:07,152 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:61)- Started AccountServiceApplication in 1.673 seconds (JVM running for 2.02)
+2022-07-16 23:20:56,816 | INFO | http-nio-8081-exec-1 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 23:20:56,816 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-07-16 23:20:56,816 | INFO | http-nio-8081-exec-1 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2022-07-16 23:20:59,353 | INFO | http-nio-8081-exec-1 | com.online.taxi.accountservice.service.impl.AuthServiceImpl | (AuthServiceImpl.java:56)- 缓存中的认证key:1_18755175162_1,value:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE4NzU1MTc1MTYyXzEiLCJpYXQiOjE2NTc5ODQ2NjN9.JBIlA0g_rOWUdm4zWufb4M46I1Cxvi7eL2Wk4Mk6fmnZEMkV2VNrM6qx6jmuhFjvvZ2RQXKdrUOJnYlC-6H1tQ
+2022-07-16 23:20:59,360 | INFO | http-nio-8081-exec-1 | com.online.taxi.accountservice.service.impl.AuthServiceImpl | (AuthServiceImpl.java:58)- 验证Token是否失效 - Token仍有效 - 延长token有效期phone: 1_18755175162_1 token:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE4NzU1MTc1MTYyXzEiLCJpYXQiOjE2NTc5ODQ2NjN9.JBIlA0g_rOWUdm4zWufb4M46I1Cxvi7eL2Wk4Mk6fmnZEMkV2VNrM6qx6jmuhFjvvZ2RQXKdrUOJnYlC-6H1tQ
+2022-07-16 23:20:59,365 | INFO | http-nio-8081-exec-1 | com.online.taxi.accountservice.controller.AuthTokenController | (AuthTokenController.java:58)- 成功
+2022-07-16 23:21:33,614 | INFO | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
+2022-07-16 23:21:48,178 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:55)- Starting AccountServiceApplication using Java 1.8.0_151 on lsk with PID 18536 (D:\ideaCodes\online-taxi\account-service\target\classes started by lsk in D:\ideaCodes\online-taxi)
+2022-07-16 23:21:48,180 | DEBUG | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-16 23:21:48,181 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (SpringApplication.java:634)- No active profile set, falling back to 1 default profile: "default"
+2022-07-16 23:21:48,616 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2022-07-16 23:21:48,618 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-16 23:21:48,631 | INFO | main | org.springframework.data.repository.config.RepositoryConfigurationDelegate | (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-07-16 23:21:48,899 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8081 (http)
+2022-07-16 23:21:48,904 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:21:48,904 | INFO | main | org.apache.catalina.core.StandardService | (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-07-16 23:21:48,904 | INFO | main | org.apache.catalina.core.StandardEngine | (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-16 23:21:48,974 | INFO | main | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-07-16 23:21:48,974 | INFO | main | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext | (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 771 ms
+2022-07-16 23:21:49,153 | INFO | main | com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure | (DruidDataSourceAutoConfigure.java:56)- Init DruidDataSource
+2022-07-16 23:21:49,280 | INFO | main | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:930)- {dataSource-1} inited
+2022-07-16 23:21:49,590 | INFO | main | org.apache.coyote.http11.Http11NioProtocol | (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8081"]
+2022-07-16 23:21:49,599 | INFO | main | org.springframework.boot.web.embedded.tomcat.TomcatWebServer | (TomcatWebServer.java:220)- Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-16 23:21:49,605 | INFO | main | com.online.taxi.accountservice.AccountServiceApplication | (StartupInfoLogger.java:61)- Started AccountServiceApplication in 1.712 seconds (JVM running for 2.1)
+2022-07-16 23:22:04,334 | INFO | http-nio-8081-exec-2 | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 23:22:04,334 | INFO | http-nio-8081-exec-2 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-07-16 23:22:04,335 | INFO | http-nio-8081-exec-2 | org.springframework.web.servlet.DispatcherServlet | (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2022-07-16 23:22:19,924 | INFO | http-nio-8081-exec-3 | com.online.taxi.accountservice.service.impl.AuthServiceImpl | (AuthServiceImpl.java:56)- 缓存中的认证key:1_18755175162_12,value:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE4NzU1MTc1MTYyXzEyIiwiaWF0IjoxNjU3OTg0OTI0fQ.443j526AaMOvNoONUupRC5VDcaDw_6gL6XGyINotXbV-tO1hWBiRkCh633FMJMyudOexgkIpZtiBhnzFoofRbA
+2022-07-16 23:22:19,928 | INFO | http-nio-8081-exec-3 | com.online.taxi.accountservice.service.impl.AuthServiceImpl | (AuthServiceImpl.java:58)- 验证Token是否失效 - Token仍有效 - 延长token有效期phone: 1_18755175162_12 token:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE4NzU1MTc1MTYyXzEyIiwiaWF0IjoxNjU3OTg0OTI0fQ.443j526AaMOvNoONUupRC5VDcaDw_6gL6XGyINotXbV-tO1hWBiRkCh633FMJMyudOexgkIpZtiBhnzFoofRbA
+2022-07-16 23:22:19,934 | INFO | http-nio-8081-exec-3 | com.online.taxi.accountservice.controller.AuthTokenController | (AuthTokenController.java:58)- 成功
+2022-07-16 23:22:41,290 | INFO | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource | (DruidDataSource.java:1825)- {dataSource-1} closed
