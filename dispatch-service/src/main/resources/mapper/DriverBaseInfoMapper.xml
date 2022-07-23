@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online.taxi.mapper.DriverBaseInfoMapper">
+  <resultMap id="BaseResultMap" type="com.online.taxi.entity.DriverBaseInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="mobile_operator" jdbcType="VARCHAR" property="mobileOperator" />
+    <result column="company_logo" jdbcType="VARCHAR" property="companyLogo" />
+    <result column="administrative_code" jdbcType="VARCHAR" property="administrativeCode" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="national" jdbcType="VARCHAR" property="national" />
+    <result column="driving_licence_number" jdbcType="VARCHAR" property="drivingLicenceNumber" />
+    <result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" />
+    <result column="foreign_language_ability" jdbcType="VARCHAR" property="foreignLanguageAbility" />
+    <result column="app_version" jdbcType="VARCHAR" property="appVersion" />
+    <result column="map_type" jdbcType="VARCHAR" property="mapType" />
+    <result column="education_background" jdbcType="VARCHAR" property="educationBackground" />
+    <result column="household_registration_authority" jdbcType="VARCHAR" property="householdRegistrationAuthority" />
+    <result column="registered_permanent_residence_address" jdbcType="VARCHAR" property="registeredPermanentResidenceAddress" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="address_longitude" jdbcType="VARCHAR" property="addressLongitude" />
+    <result column="address_latitude" jdbcType="VARCHAR" property="addressLatitude" />
+    <result column="driver_img_file_number" jdbcType="VARCHAR" property="driverImgFileNumber" />
+    <result column="driver_license" jdbcType="VARCHAR" property="driverLicense" />
+    <result column="driver_license_scan_copy_number" jdbcType="VARCHAR" property="driverLicenseScanCopyNumber" />
+    <result column="driving_type" jdbcType="VARCHAR" property="drivingType" />
+    <result column="first_get_driver_license_date" jdbcType="TIMESTAMP" property="firstGetDriverLicenseDate" />
+    <result column="driver_license_validity_start" jdbcType="TIMESTAMP" property="driverLicenseValidityStart" />
+    <result column="driver_license_validity_end" jdbcType="TIMESTAMP" property="driverLicenseValidityEnd" />
+    <result column="is_taxi_driver" jdbcType="INTEGER" property="isTaxiDriver" />
+    <result column="network_reservation_taxi_driver_license_number" jdbcType="VARCHAR" property="networkReservationTaxiDriverLicenseNumber" />
+    <result column="network_reservation_taxi_driver_license_issuing_agencies" jdbcType="VARCHAR" property="networkReservationTaxiDriverLicenseIssuingAgencies" />
+    <result column="certificate_issuing_date" jdbcType="TIMESTAMP" property="certificateIssuingDate" />
+    <result column="first_qualification_date" jdbcType="TIMESTAMP" property="firstQualificationDate" />
+    <result column="qualification_certificate_validity_start" jdbcType="TIMESTAMP" property="qualificationCertificateValidityStart" />
+    <result column="qualification_certificate_validity_end" jdbcType="TIMESTAMP" property="qualificationCertificateValidityEnd" />
+    <result column="reported_date" jdbcType="TIMESTAMP" property="reportedDate" />
+    <result column="is_full_time_driver" jdbcType="INTEGER" property="isFullTimeDriver" />
+    <result column="is_in_driver_blacklist" jdbcType="INTEGER" property="isInDriverBlacklist" />
+    <result column="service_type" jdbcType="INTEGER" property="serviceType" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="contract_start_date" jdbcType="TIMESTAMP" property="contractStartDate" />
+    <result column="contract_end_date" jdbcType="TIMESTAMP" property="contractEndDate" />
+    <result column="emergency_contact" jdbcType="VARCHAR" property="emergencyContact" />
+    <result column="emergency_contact_phone_number" jdbcType="VARCHAR" property="emergencyContactPhoneNumber" />
+    <result column="emergency_contact_address" jdbcType="VARCHAR" property="emergencyContactAddress" />
+    <result column="training_courses" jdbcType="VARCHAR" property="trainingCourses" />
+    <result column="training_courses_date" jdbcType="TIMESTAMP" property="trainingCoursesDate" />
+    <result column="training_courses_start_date" jdbcType="TIMESTAMP" property="trainingCoursesStartDate" />
+    <result column="training_courses_end_date" jdbcType="TIMESTAMP" property="trainingCoursesEndDate" />
+    <result column="training_courses_time" jdbcType="INTEGER" property="trainingCoursesTime" />
+    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+    <result column="bank_card_number" jdbcType="VARCHAR" property="bankCardNumber" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="qualification_certificate_img" jdbcType="VARCHAR" property="qualificationCertificateImg" />
+    <result column="other_img1" jdbcType="VARCHAR" property="otherImg1" />
+    <result column="other_img2" jdbcType="VARCHAR" property="otherImg2" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, mobile_operator, company_logo, administrative_code, birthday, country, `national`, 
+    driving_licence_number, marital_status, foreign_language_ability, app_version, map_type, 
+    education_background, household_registration_authority, registered_permanent_residence_address, 
+    address, address_longitude, address_latitude, driver_img_file_number, driver_license, 
+    driver_license_scan_copy_number, driving_type, first_get_driver_license_date, driver_license_validity_start, 
+    driver_license_validity_end, is_taxi_driver, network_reservation_taxi_driver_license_number, 
+    network_reservation_taxi_driver_license_issuing_agencies, certificate_issuing_date, 
+    first_qualification_date, qualification_certificate_validity_start, qualification_certificate_validity_end, 
+    reported_date, is_full_time_driver, is_in_driver_blacklist, service_type, company, 
+    contract_start_date, contract_end_date, emergency_contact, emergency_contact_phone_number, 
+    emergency_contact_address, training_courses, training_courses_date, training_courses_start_date, 
+    training_courses_end_date, training_courses_time, bank_name, bank_card_number, note, 
+    qualification_certificate_img, other_img1, other_img2, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_driver_base_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tbl_driver_base_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.online.taxi.entity.DriverBaseInfo" useGeneratedKeys="true">
+    insert into tbl_driver_base_info (mobile_operator, company_logo, administrative_code, 
+      birthday, country, `national`, 
+      driving_licence_number, marital_status, foreign_language_ability, 
+      app_version, map_type, education_background, 
+      household_registration_authority, registered_permanent_residence_address, 
+      address, address_longitude, address_latitude, 
+      driver_img_file_number, driver_license, driver_license_scan_copy_number, 
+      driving_type, first_get_driver_license_date, 
+      driver_license_validity_start, driver_license_validity_end, 
+      is_taxi_driver, network_reservation_taxi_driver_license_number, 
+      network_reservation_taxi_driver_license_issuing_agencies, certificate_issuing_date, 
+      first_qualification_date, qualification_certificate_validity_start, 
+      qualification_certificate_validity_end, reported_date, 
+      is_full_time_driver, is_in_driver_blacklist, 
+      service_type, company, contract_start_date, 
+      contract_end_date, emergency_contact, emergency_contact_phone_number, 
+      emergency_contact_address, training_courses, 
+      training_courses_date, training_courses_start_date, 
+      training_courses_end_date, training_courses_time, 
+      bank_name, bank_card_number, note, 
+      qualification_certificate_img, other_img1, 
+      other_img2, create_time, update_time
+      )
+    values (#{mobileOperator,jdbcType=VARCHAR}, #{companyLogo,jdbcType=VARCHAR}, #{administrativeCode,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=DATE}, #{country,jdbcType=VARCHAR}, #{national,jdbcType=VARCHAR}, 
+      #{drivingLicenceNumber,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, #{foreignLanguageAbility,jdbcType=VARCHAR}, 
+      #{appVersion,jdbcType=VARCHAR}, #{mapType,jdbcType=VARCHAR}, #{educationBackground,jdbcType=VARCHAR}, 
+      #{householdRegistrationAuthority,jdbcType=VARCHAR}, #{registeredPermanentResidenceAddress,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{addressLongitude,jdbcType=VARCHAR}, #{addressLatitude,jdbcType=VARCHAR}, 
+      #{driverImgFileNumber,jdbcType=VARCHAR}, #{driverLicense,jdbcType=VARCHAR}, #{driverLicenseScanCopyNumber,jdbcType=VARCHAR}, 
+      #{drivingType,jdbcType=VARCHAR}, #{firstGetDriverLicenseDate,jdbcType=TIMESTAMP}, 
+      #{driverLicenseValidityStart,jdbcType=TIMESTAMP}, #{driverLicenseValidityEnd,jdbcType=TIMESTAMP}, 
+      #{isTaxiDriver,jdbcType=INTEGER}, #{networkReservationTaxiDriverLicenseNumber,jdbcType=VARCHAR}, 
+      #{networkReservationTaxiDriverLicenseIssuingAgencies,jdbcType=VARCHAR}, #{certificateIssuingDate,jdbcType=TIMESTAMP}, 
+      #{firstQualificationDate,jdbcType=TIMESTAMP}, #{qualificationCertificateValidityStart,jdbcType=TIMESTAMP}, 
+      #{qualificationCertificateValidityEnd,jdbcType=TIMESTAMP}, #{reportedDate,jdbcType=TIMESTAMP}, 
+      #{isFullTimeDriver,jdbcType=INTEGER}, #{isInDriverBlacklist,jdbcType=INTEGER}, 
+      #{serviceType,jdbcType=INTEGER}, #{company,jdbcType=VARCHAR}, #{contractStartDate,jdbcType=TIMESTAMP}, 
+      #{contractEndDate,jdbcType=TIMESTAMP}, #{emergencyContact,jdbcType=VARCHAR}, #{emergencyContactPhoneNumber,jdbcType=VARCHAR}, 
+      #{emergencyContactAddress,jdbcType=VARCHAR}, #{trainingCourses,jdbcType=VARCHAR}, 
+      #{trainingCoursesDate,jdbcType=TIMESTAMP}, #{trainingCoursesStartDate,jdbcType=TIMESTAMP}, 
+      #{trainingCoursesEndDate,jdbcType=TIMESTAMP}, #{trainingCoursesTime,jdbcType=INTEGER}, 
+      #{bankName,jdbcType=VARCHAR}, #{bankCardNumber,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, 
+      #{qualificationCertificateImg,jdbcType=VARCHAR}, #{otherImg1,jdbcType=VARCHAR}, 
+      #{otherImg2,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.online.taxi.entity.DriverBaseInfo" useGeneratedKeys="true">
+    insert into tbl_driver_base_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mobileOperator != null">
+        mobile_operator,
+      </if>
+      <if test="companyLogo != null">
+        company_logo,
+      </if>
+      <if test="administrativeCode != null">
+        administrative_code,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="country != null">
+        country,
+      </if>
+      <if test="national != null">
+        `national`,
+      </if>
+      <if test="drivingLicenceNumber != null">
+        driving_licence_number,
+      </if>
+      <if test="maritalStatus != null">
+        marital_status,
+      </if>
+      <if test="foreignLanguageAbility != null">
+        foreign_language_ability,
+      </if>
+      <if test="appVersion != null">
+        app_version,
+      </if>
+      <if test="mapType != null">
+        map_type,
+      </if>
+      <if test="educationBackground != null">
+        education_background,
+      </if>
+      <if test="householdRegistrationAuthority != null">
+        household_registration_authority,
+      </if>
+      <if test="registeredPermanentResidenceAddress != null">
+        registered_permanent_residence_address,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="addressLongitude != null">
+        address_longitude,
+      </if>
+      <if test="addressLatitude != null">
+        address_latitude,
+      </if>
+      <if test="driverImgFileNumber != null">
+        driver_img_file_number,
+      </if>
+      <if test="driverLicense != null">
+        driver_license,
+      </if>
+      <if test="driverLicenseScanCopyNumber != null">
+        driver_license_scan_copy_number,
+      </if>
+      <if test="drivingType != null">
+        driving_type,
+      </if>
+      <if test="firstGetDriverLicenseDate != null">
+        first_get_driver_license_date,
+      </if>
+      <if test="driverLicenseValidityStart != null">
+        driver_license_validity_start,
+      </if>
+      <if test="driverLicenseValidityEnd != null">
+        driver_license_validity_end,
+      </if>
+      <if test="isTaxiDriver != null">
+        is_taxi_driver,
+      </if>
+      <if test="networkReservationTaxiDriverLicenseNumber != null">
+        network_reservation_taxi_driver_license_number,
+      </if>
+      <if test="networkReservationTaxiDriverLicenseIssuingAgencies != null">
+        network_reservation_taxi_driver_license_issuing_agencies,
+      </if>
+      <if test="certificateIssuingDate != null">
+        certificate_issuing_date,
+      </if>
+      <if test="firstQualificationDate != null">
+        first_qualification_date,
+      </if>
+      <if test="qualificationCertificateValidityStart != null">
+        qualification_certificate_validity_start,
+      </if>
+      <if test="qualificationCertificateValidityEnd != null">
+        qualification_certificate_validity_end,
+      </if>
+      <if test="reportedDate != null">
+        reported_date,
+      </if>
+      <if test="isFullTimeDriver != null">
+        is_full_time_driver,
+      </if>
+      <if test="isInDriverBlacklist != null">
+        is_in_driver_blacklist,
+      </if>
+      <if test="serviceType != null">
+        service_type,
+      </if>
+      <if test="company != null">
+        company,
+      </if>
+      <if test="contractStartDate != null">
+        contract_start_date,
+      </if>
+      <if test="contractEndDate != null">
+        contract_end_date,
+      </if>
+      <if test="emergencyContact != null">
+        emergency_contact,
+      </if>
+      <if test="emergencyContactPhoneNumber != null">
+        emergency_contact_phone_number,
+      </if>
+      <if test="emergencyContactAddress != null">
+        emergency_contact_address,
+      </if>
+      <if test="trainingCourses != null">
+        training_courses,
+      </if>
+      <if test="trainingCoursesDate != null">
+        training_courses_date,
+      </if>
+      <if test="trainingCoursesStartDate != null">
+        training_courses_start_date,
+      </if>
+      <if test="trainingCoursesEndDate != null">
+        training_courses_end_date,
+      </if>
+      <if test="trainingCoursesTime != null">
+        training_courses_time,
+      </if>
+      <if test="bankName != null">
+        bank_name,
+      </if>
+      <if test="bankCardNumber != null">
+        bank_card_number,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="qualificationCertificateImg != null">
+        qualification_certificate_img,
+      </if>
+      <if test="otherImg1 != null">
+        other_img1,
+      </if>
+      <if test="otherImg2 != null">
+        other_img2,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mobileOperator != null">
+        #{mobileOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogo != null">
+        #{companyLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="administrativeCode != null">
+        #{administrativeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="country != null">
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="national != null">
+        #{national,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicenceNumber != null">
+        #{drivingLicenceNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null">
+        #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="foreignLanguageAbility != null">
+        #{foreignLanguageAbility,jdbcType=VARCHAR},
+      </if>
+      <if test="appVersion != null">
+        #{appVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="mapType != null">
+        #{mapType,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null">
+        #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="householdRegistrationAuthority != null">
+        #{householdRegistrationAuthority,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredPermanentResidenceAddress != null">
+        #{registeredPermanentResidenceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLongitude != null">
+        #{addressLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLatitude != null">
+        #{addressLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="driverImgFileNumber != null">
+        #{driverImgFileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicense != null">
+        #{driverLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicenseScanCopyNumber != null">
+        #{driverLicenseScanCopyNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingType != null">
+        #{drivingType,jdbcType=VARCHAR},
+      </if>
+      <if test="firstGetDriverLicenseDate != null">
+        #{firstGetDriverLicenseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverLicenseValidityStart != null">
+        #{driverLicenseValidityStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverLicenseValidityEnd != null">
+        #{driverLicenseValidityEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isTaxiDriver != null">
+        #{isTaxiDriver,jdbcType=INTEGER},
+      </if>
+      <if test="networkReservationTaxiDriverLicenseNumber != null">
+        #{networkReservationTaxiDriverLicenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="networkReservationTaxiDriverLicenseIssuingAgencies != null">
+        #{networkReservationTaxiDriverLicenseIssuingAgencies,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateIssuingDate != null">
+        #{certificateIssuingDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="firstQualificationDate != null">
+        #{firstQualificationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualificationCertificateValidityStart != null">
+        #{qualificationCertificateValidityStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualificationCertificateValidityEnd != null">
+        #{qualificationCertificateValidityEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reportedDate != null">
+        #{reportedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isFullTimeDriver != null">
+        #{isFullTimeDriver,jdbcType=INTEGER},
+      </if>
+      <if test="isInDriverBlacklist != null">
+        #{isInDriverBlacklist,jdbcType=INTEGER},
+      </if>
+      <if test="serviceType != null">
+        #{serviceType,jdbcType=INTEGER},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="contractStartDate != null">
+        #{contractStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractEndDate != null">
+        #{contractEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="emergencyContact != null">
+        #{emergencyContact,jdbcType=VARCHAR},
+      </if>
+      <if test="emergencyContactPhoneNumber != null">
+        #{emergencyContactPhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="emergencyContactAddress != null">
+        #{emergencyContactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="trainingCourses != null">
+        #{trainingCourses,jdbcType=VARCHAR},
+      </if>
+      <if test="trainingCoursesDate != null">
+        #{trainingCoursesDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesStartDate != null">
+        #{trainingCoursesStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesEndDate != null">
+        #{trainingCoursesEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesTime != null">
+        #{trainingCoursesTime,jdbcType=INTEGER},
+      </if>
+      <if test="bankName != null">
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCardNumber != null">
+        #{bankCardNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationCertificateImg != null">
+        #{qualificationCertificateImg,jdbcType=VARCHAR},
+      </if>
+      <if test="otherImg1 != null">
+        #{otherImg1,jdbcType=VARCHAR},
+      </if>
+      <if test="otherImg2 != null">
+        #{otherImg2,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.online.taxi.entity.DriverBaseInfo">
+    update tbl_driver_base_info
+    <set>
+      <if test="mobileOperator != null">
+        mobile_operator = #{mobileOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogo != null">
+        company_logo = #{companyLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="administrativeCode != null">
+        administrative_code = #{administrativeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="country != null">
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="national != null">
+        `national` = #{national,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicenceNumber != null">
+        driving_licence_number = #{drivingLicenceNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null">
+        marital_status = #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="foreignLanguageAbility != null">
+        foreign_language_ability = #{foreignLanguageAbility,jdbcType=VARCHAR},
+      </if>
+      <if test="appVersion != null">
+        app_version = #{appVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="mapType != null">
+        map_type = #{mapType,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null">
+        education_background = #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="householdRegistrationAuthority != null">
+        household_registration_authority = #{householdRegistrationAuthority,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredPermanentResidenceAddress != null">
+        registered_permanent_residence_address = #{registeredPermanentResidenceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLongitude != null">
+        address_longitude = #{addressLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLatitude != null">
+        address_latitude = #{addressLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="driverImgFileNumber != null">
+        driver_img_file_number = #{driverImgFileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicense != null">
+        driver_license = #{driverLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicenseScanCopyNumber != null">
+        driver_license_scan_copy_number = #{driverLicenseScanCopyNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingType != null">
+        driving_type = #{drivingType,jdbcType=VARCHAR},
+      </if>
+      <if test="firstGetDriverLicenseDate != null">
+        first_get_driver_license_date = #{firstGetDriverLicenseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverLicenseValidityStart != null">
+        driver_license_validity_start = #{driverLicenseValidityStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverLicenseValidityEnd != null">
+        driver_license_validity_end = #{driverLicenseValidityEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isTaxiDriver != null">
+        is_taxi_driver = #{isTaxiDriver,jdbcType=INTEGER},
+      </if>
+      <if test="networkReservationTaxiDriverLicenseNumber != null">
+        network_reservation_taxi_driver_license_number = #{networkReservationTaxiDriverLicenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="networkReservationTaxiDriverLicenseIssuingAgencies != null">
+        network_reservation_taxi_driver_license_issuing_agencies = #{networkReservationTaxiDriverLicenseIssuingAgencies,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateIssuingDate != null">
+        certificate_issuing_date = #{certificateIssuingDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="firstQualificationDate != null">
+        first_qualification_date = #{firstQualificationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualificationCertificateValidityStart != null">
+        qualification_certificate_validity_start = #{qualificationCertificateValidityStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualificationCertificateValidityEnd != null">
+        qualification_certificate_validity_end = #{qualificationCertificateValidityEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reportedDate != null">
+        reported_date = #{reportedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isFullTimeDriver != null">
+        is_full_time_driver = #{isFullTimeDriver,jdbcType=INTEGER},
+      </if>
+      <if test="isInDriverBlacklist != null">
+        is_in_driver_blacklist = #{isInDriverBlacklist,jdbcType=INTEGER},
+      </if>
+      <if test="serviceType != null">
+        service_type = #{serviceType,jdbcType=INTEGER},
+      </if>
+      <if test="company != null">
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="contractStartDate != null">
+        contract_start_date = #{contractStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractEndDate != null">
+        contract_end_date = #{contractEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="emergencyContact != null">
+        emergency_contact = #{emergencyContact,jdbcType=VARCHAR},
+      </if>
+      <if test="emergencyContactPhoneNumber != null">
+        emergency_contact_phone_number = #{emergencyContactPhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="emergencyContactAddress != null">
+        emergency_contact_address = #{emergencyContactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="trainingCourses != null">
+        training_courses = #{trainingCourses,jdbcType=VARCHAR},
+      </if>
+      <if test="trainingCoursesDate != null">
+        training_courses_date = #{trainingCoursesDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesStartDate != null">
+        training_courses_start_date = #{trainingCoursesStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesEndDate != null">
+        training_courses_end_date = #{trainingCoursesEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trainingCoursesTime != null">
+        training_courses_time = #{trainingCoursesTime,jdbcType=INTEGER},
+      </if>
+      <if test="bankName != null">
+        bank_name = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCardNumber != null">
+        bank_card_number = #{bankCardNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationCertificateImg != null">
+        qualification_certificate_img = #{qualificationCertificateImg,jdbcType=VARCHAR},
+      </if>
+      <if test="otherImg1 != null">
+        other_img1 = #{otherImg1,jdbcType=VARCHAR},
+      </if>
+      <if test="otherImg2 != null">
+        other_img2 = #{otherImg2,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.online.taxi.entity.DriverBaseInfo">
+    update tbl_driver_base_info
+    set mobile_operator = #{mobileOperator,jdbcType=VARCHAR},
+      company_logo = #{companyLogo,jdbcType=VARCHAR},
+      administrative_code = #{administrativeCode,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      country = #{country,jdbcType=VARCHAR},
+      `national` = #{national,jdbcType=VARCHAR},
+      driving_licence_number = #{drivingLicenceNumber,jdbcType=VARCHAR},
+      marital_status = #{maritalStatus,jdbcType=VARCHAR},
+      foreign_language_ability = #{foreignLanguageAbility,jdbcType=VARCHAR},
+      app_version = #{appVersion,jdbcType=VARCHAR},
+      map_type = #{mapType,jdbcType=VARCHAR},
+      education_background = #{educationBackground,jdbcType=VARCHAR},
+      household_registration_authority = #{householdRegistrationAuthority,jdbcType=VARCHAR},
+      registered_permanent_residence_address = #{registeredPermanentResidenceAddress,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      address_longitude = #{addressLongitude,jdbcType=VARCHAR},
+      address_latitude = #{addressLatitude,jdbcType=VARCHAR},
+      driver_img_file_number = #{driverImgFileNumber,jdbcType=VARCHAR},
+      driver_license = #{driverLicense,jdbcType=VARCHAR},
+      driver_license_scan_copy_number = #{driverLicenseScanCopyNumber,jdbcType=VARCHAR},
+      driving_type = #{drivingType,jdbcType=VARCHAR},
+      first_get_driver_license_date = #{firstGetDriverLicenseDate,jdbcType=TIMESTAMP},
+      driver_license_validity_start = #{driverLicenseValidityStart,jdbcType=TIMESTAMP},
+      driver_license_validity_end = #{driverLicenseValidityEnd,jdbcType=TIMESTAMP},
+      is_taxi_driver = #{isTaxiDriver,jdbcType=INTEGER},
+      network_reservation_taxi_driver_license_number = #{networkReservationTaxiDriverLicenseNumber,jdbcType=VARCHAR},
+      network_reservation_taxi_driver_license_issuing_agencies = #{networkReservationTaxiDriverLicenseIssuingAgencies,jdbcType=VARCHAR},
+      certificate_issuing_date = #{certificateIssuingDate,jdbcType=TIMESTAMP},
+      first_qualification_date = #{firstQualificationDate,jdbcType=TIMESTAMP},
+      qualification_certificate_validity_start = #{qualificationCertificateValidityStart,jdbcType=TIMESTAMP},
+      qualification_certificate_validity_end = #{qualificationCertificateValidityEnd,jdbcType=TIMESTAMP},
+      reported_date = #{reportedDate,jdbcType=TIMESTAMP},
+      is_full_time_driver = #{isFullTimeDriver,jdbcType=INTEGER},
+      is_in_driver_blacklist = #{isInDriverBlacklist,jdbcType=INTEGER},
+      service_type = #{serviceType,jdbcType=INTEGER},
+      company = #{company,jdbcType=VARCHAR},
+      contract_start_date = #{contractStartDate,jdbcType=TIMESTAMP},
+      contract_end_date = #{contractEndDate,jdbcType=TIMESTAMP},
+      emergency_contact = #{emergencyContact,jdbcType=VARCHAR},
+      emergency_contact_phone_number = #{emergencyContactPhoneNumber,jdbcType=VARCHAR},
+      emergency_contact_address = #{emergencyContactAddress,jdbcType=VARCHAR},
+      training_courses = #{trainingCourses,jdbcType=VARCHAR},
+      training_courses_date = #{trainingCoursesDate,jdbcType=TIMESTAMP},
+      training_courses_start_date = #{trainingCoursesStartDate,jdbcType=TIMESTAMP},
+      training_courses_end_date = #{trainingCoursesEndDate,jdbcType=TIMESTAMP},
+      training_courses_time = #{trainingCoursesTime,jdbcType=INTEGER},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_card_number = #{bankCardNumber,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      qualification_certificate_img = #{qualificationCertificateImg,jdbcType=VARCHAR},
+      other_img1 = #{otherImg1,jdbcType=VARCHAR},
+      other_img2 = #{otherImg2,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

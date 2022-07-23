@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlinetaxi.mapper.CarInfoMapper">
+  <resultMap id="BaseResultMap" type="com.onlinetaxi.entity.CarInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="plate_number" jdbcType="VARCHAR" property="plateNumber" />
+    <result column="operation_status" jdbcType="INTEGER" property="operationStatus" />
+    <result column="publish_time" jdbcType="TIMESTAMP" property="publishTime" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="car_img" jdbcType="VARCHAR" property="carImg" />
+    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+    <result column="car_type_id" jdbcType="INTEGER" property="carTypeId" />
+    <result column="car_level_id" jdbcType="INTEGER" property="carLevelId" />
+    <result column="regist_date" jdbcType="TIMESTAMP" property="registDate" />
+    <result column="insurance_start_date" jdbcType="TIMESTAMP" property="insuranceStartDate" />
+    <result column="insurance_end_date" jdbcType="TIMESTAMP" property="insuranceEndDate" />
+    <result column="annual_end_date" jdbcType="TIMESTAMP" property="annualEndDate" />
+    <result column="car_license_img" jdbcType="VARCHAR" property="carLicenseImg" />
+    <result column="is_free_order" jdbcType="INTEGER" property="isFreeOrder" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="use_status" jdbcType="INTEGER" property="useStatus" />
+    <result column="large_screen_device_code" jdbcType="VARCHAR" property="largeScreenDeviceCode" />
+    <result column="large_screen_device_brand" jdbcType="VARCHAR" property="largeScreenDeviceBrand" />
+    <result column="car_screen_device_code" jdbcType="VARCHAR" property="carScreenDeviceCode" />
+    <result column="car_screen_device_brand" jdbcType="VARCHAR" property="carScreenDeviceBrand" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="total_mile" jdbcType="INTEGER" property="totalMile" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="asset_coding" jdbcType="VARCHAR" property="assetCoding" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, plate_number, operation_status, publish_time, full_name, color, car_img, city_code, 
+    car_type_id, car_level_id, regist_date, insurance_start_date, insurance_end_date, 
+    annual_end_date, car_license_img, is_free_order, remark, use_status, large_screen_device_code, 
+    large_screen_device_brand, car_screen_device_code, car_screen_device_brand, operator_id, 
+    total_mile, create_time, update_time, asset_coding
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_car_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tbl_car_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.CarInfo" useGeneratedKeys="true">
+    insert into tbl_car_info (plate_number, operation_status, publish_time, 
+      full_name, color, car_img, 
+      city_code, car_type_id, car_level_id, 
+      regist_date, insurance_start_date, insurance_end_date, 
+      annual_end_date, car_license_img, is_free_order, 
+      remark, use_status, large_screen_device_code, 
+      large_screen_device_brand, car_screen_device_code, 
+      car_screen_device_brand, operator_id, total_mile, 
+      create_time, update_time, asset_coding
+      )
+    values (#{plateNumber,jdbcType=VARCHAR}, #{operationStatus,jdbcType=INTEGER}, #{publishTime,jdbcType=TIMESTAMP}, 
+      #{fullName,jdbcType=VARCHAR}, #{color,jdbcType=VARCHAR}, #{carImg,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{carTypeId,jdbcType=INTEGER}, #{carLevelId,jdbcType=INTEGER}, 
+      #{registDate,jdbcType=TIMESTAMP}, #{insuranceStartDate,jdbcType=TIMESTAMP}, #{insuranceEndDate,jdbcType=TIMESTAMP}, 
+      #{annualEndDate,jdbcType=TIMESTAMP}, #{carLicenseImg,jdbcType=VARCHAR}, #{isFreeOrder,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR}, #{useStatus,jdbcType=INTEGER}, #{largeScreenDeviceCode,jdbcType=VARCHAR}, 
+      #{largeScreenDeviceBrand,jdbcType=VARCHAR}, #{carScreenDeviceCode,jdbcType=VARCHAR}, 
+      #{carScreenDeviceBrand,jdbcType=VARCHAR}, #{operatorId,jdbcType=INTEGER}, #{totalMile,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{assetCoding,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.CarInfo" useGeneratedKeys="true">
+    insert into tbl_car_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="plateNumber != null">
+        plate_number,
+      </if>
+      <if test="operationStatus != null">
+        operation_status,
+      </if>
+      <if test="publishTime != null">
+        publish_time,
+      </if>
+      <if test="fullName != null">
+        full_name,
+      </if>
+      <if test="color != null">
+        color,
+      </if>
+      <if test="carImg != null">
+        car_img,
+      </if>
+      <if test="cityCode != null">
+        city_code,
+      </if>
+      <if test="carTypeId != null">
+        car_type_id,
+      </if>
+      <if test="carLevelId != null">
+        car_level_id,
+      </if>
+      <if test="registDate != null">
+        regist_date,
+      </if>
+      <if test="insuranceStartDate != null">
+        insurance_start_date,
+      </if>
+      <if test="insuranceEndDate != null">
+        insurance_end_date,
+      </if>
+      <if test="annualEndDate != null">
+        annual_end_date,
+      </if>
+      <if test="carLicenseImg != null">
+        car_license_img,
+      </if>
+      <if test="isFreeOrder != null">
+        is_free_order,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="useStatus != null">
+        use_status,
+      </if>
+      <if test="largeScreenDeviceCode != null">
+        large_screen_device_code,
+      </if>
+      <if test="largeScreenDeviceBrand != null">
+        large_screen_device_brand,
+      </if>
+      <if test="carScreenDeviceCode != null">
+        car_screen_device_code,
+      </if>
+      <if test="carScreenDeviceBrand != null">
+        car_screen_device_brand,
+      </if>
+      <if test="operatorId != null">
+        operator_id,
+      </if>
+      <if test="totalMile != null">
+        total_mile,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="assetCoding != null">
+        asset_coding,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="plateNumber != null">
+        #{plateNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="operationStatus != null">
+        #{operationStatus,jdbcType=INTEGER},
+      </if>
+      <if test="publishTime != null">
+        #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fullName != null">
+        #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="carImg != null">
+        #{carImg,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null">
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeId != null">
+        #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="carLevelId != null">
+        #{carLevelId,jdbcType=INTEGER},
+      </if>
+      <if test="registDate != null">
+        #{registDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceStartDate != null">
+        #{insuranceStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceEndDate != null">
+        #{insuranceEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="annualEndDate != null">
+        #{annualEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="carLicenseImg != null">
+        #{carLicenseImg,jdbcType=VARCHAR},
+      </if>
+      <if test="isFreeOrder != null">
+        #{isFreeOrder,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="useStatus != null">
+        #{useStatus,jdbcType=INTEGER},
+      </if>
+      <if test="largeScreenDeviceCode != null">
+        #{largeScreenDeviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="largeScreenDeviceBrand != null">
+        #{largeScreenDeviceBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="carScreenDeviceCode != null">
+        #{carScreenDeviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="carScreenDeviceBrand != null">
+        #{carScreenDeviceBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null">
+        #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="totalMile != null">
+        #{totalMile,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assetCoding != null">
+        #{assetCoding,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlinetaxi.entity.CarInfo">
+    update tbl_car_info
+    <set>
+      <if test="plateNumber != null">
+        plate_number = #{plateNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="operationStatus != null">
+        operation_status = #{operationStatus,jdbcType=INTEGER},
+      </if>
+      <if test="publishTime != null">
+        publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fullName != null">
+        full_name = #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null">
+        color = #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="carImg != null">
+        car_img = #{carImg,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null">
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeId != null">
+        car_type_id = #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="carLevelId != null">
+        car_level_id = #{carLevelId,jdbcType=INTEGER},
+      </if>
+      <if test="registDate != null">
+        regist_date = #{registDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceStartDate != null">
+        insurance_start_date = #{insuranceStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceEndDate != null">
+        insurance_end_date = #{insuranceEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="annualEndDate != null">
+        annual_end_date = #{annualEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="carLicenseImg != null">
+        car_license_img = #{carLicenseImg,jdbcType=VARCHAR},
+      </if>
+      <if test="isFreeOrder != null">
+        is_free_order = #{isFreeOrder,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="useStatus != null">
+        use_status = #{useStatus,jdbcType=INTEGER},
+      </if>
+      <if test="largeScreenDeviceCode != null">
+        large_screen_device_code = #{largeScreenDeviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="largeScreenDeviceBrand != null">
+        large_screen_device_brand = #{largeScreenDeviceBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="carScreenDeviceCode != null">
+        car_screen_device_code = #{carScreenDeviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="carScreenDeviceBrand != null">
+        car_screen_device_brand = #{carScreenDeviceBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null">
+        operator_id = #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="totalMile != null">
+        total_mile = #{totalMile,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assetCoding != null">
+        asset_coding = #{assetCoding,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlinetaxi.entity.CarInfo">
+    update tbl_car_info
+    set plate_number = #{plateNumber,jdbcType=VARCHAR},
+      operation_status = #{operationStatus,jdbcType=INTEGER},
+      publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      full_name = #{fullName,jdbcType=VARCHAR},
+      color = #{color,jdbcType=VARCHAR},
+      car_img = #{carImg,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      car_type_id = #{carTypeId,jdbcType=INTEGER},
+      car_level_id = #{carLevelId,jdbcType=INTEGER},
+      regist_date = #{registDate,jdbcType=TIMESTAMP},
+      insurance_start_date = #{insuranceStartDate,jdbcType=TIMESTAMP},
+      insurance_end_date = #{insuranceEndDate,jdbcType=TIMESTAMP},
+      annual_end_date = #{annualEndDate,jdbcType=TIMESTAMP},
+      car_license_img = #{carLicenseImg,jdbcType=VARCHAR},
+      is_free_order = #{isFreeOrder,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      use_status = #{useStatus,jdbcType=INTEGER},
+      large_screen_device_code = #{largeScreenDeviceCode,jdbcType=VARCHAR},
+      large_screen_device_brand = #{largeScreenDeviceBrand,jdbcType=VARCHAR},
+      car_screen_device_code = #{carScreenDeviceCode,jdbcType=VARCHAR},
+      car_screen_device_brand = #{carScreenDeviceBrand,jdbcType=VARCHAR},
+      operator_id = #{operatorId,jdbcType=INTEGER},
+      total_mile = #{totalMile,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      asset_coding = #{assetCoding,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

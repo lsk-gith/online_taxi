@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlinetaxi.mapper.TagInfoMapper">
+  <resultMap id="BaseResultMap" type="com.onlinetaxi.entity.TagInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="tag_name" jdbcType="VARCHAR" property="tagName" />
+    <result column="tag_img" jdbcType="VARCHAR" property="tagImg" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tag_name, tag_img, `status`, operator_id, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_tag_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tbl_tag_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.TagInfo" useGeneratedKeys="true">
+    insert into tbl_tag_info (tag_name, tag_img, `status`, 
+      operator_id, create_time, update_time
+      )
+    values (#{tagName,jdbcType=VARCHAR}, #{tagImg,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{operatorId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.TagInfo" useGeneratedKeys="true">
+    insert into tbl_tag_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tagName != null">
+        tag_name,
+      </if>
+      <if test="tagImg != null">
+        tag_img,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="operatorId != null">
+        operator_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tagName != null">
+        #{tagName,jdbcType=VARCHAR},
+      </if>
+      <if test="tagImg != null">
+        #{tagImg,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="operatorId != null">
+        #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlinetaxi.entity.TagInfo">
+    update tbl_tag_info
+    <set>
+      <if test="tagName != null">
+        tag_name = #{tagName,jdbcType=VARCHAR},
+      </if>
+      <if test="tagImg != null">
+        tag_img = #{tagImg,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="operatorId != null">
+        operator_id = #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlinetaxi.entity.TagInfo">
+    update tbl_tag_info
+    set tag_name = #{tagName,jdbcType=VARCHAR},
+      tag_img = #{tagImg,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      operator_id = #{operatorId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
