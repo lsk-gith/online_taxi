@@ -21,16 +21,16 @@ import java.util.concurrent.ConcurrentHashMap;
 @Data
 public class TaskStore {
     private static final Logger LOGGER = LoggerFactory.getLogger(TaskStore.class);
-    private final ConcurrentHashMap<Integer, ITask> result = new ConcurrentHashMap();
+    private final ConcurrentHashMap<Integer, ITask> results = new ConcurrentHashMap();
 
     public void addTask(int taskId, ITask task){
-        result.put(taskId, task);
+        results.put(taskId, task);
     }
 
     public List<ITask> getNeedRetryTask(){
-        synchronized (result){
-            List<ITask> list = new ArrayList<>(result.values());
-            result.clear();
+        synchronized (results){
+            List<ITask> list = new ArrayList<>(results.values());
+            results.clear();
             return list;
         }
     }

@@ -257,7 +257,7 @@ public class DispatchService {
         return ResponseResult.success(dispatch);
     }
 
-    private List<DriverData> getCarByOrder(Order order, TaskCondition taskCondition, Integer distance, List<Integer> usedIds, int round, boolean searchType) {
+    public List<DriverData> getCarByOrder(Order order, TaskCondition taskCondition, Integer distance, List<Integer> usedIds, int round, boolean searchType) {
         OrderRulePrice orderRulePrice = orderRulePriceMapper.selectByOrderId(order.getId());
         if(null == orderRulePrice){
             log.info("#orderId = " + order.getId() + "  round = " + round + "orderRulePrice null");
@@ -399,7 +399,7 @@ public class DispatchService {
         return list;
     }
 
-    private CarInfo getCarInfoById(int carId) {
+    public CarInfo getCarInfoById(int carId) {
         return carInfoMapper.selectByPrimaryKey(carId);
     }
 
@@ -489,6 +489,7 @@ public class DispatchService {
     private static class LazyHodler {
         private static DispatchService ins = new DispatchService();
     }
+
 
     public static DispatchService ins() {
         return LazyHodler.ins;

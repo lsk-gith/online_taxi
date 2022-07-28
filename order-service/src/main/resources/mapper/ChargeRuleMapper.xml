@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlinetaxi.mapper.ChargeRuleMapper">
+  <resultMap id="BaseResultMap" type="com.onlinetaxi.entity.ChargeRule">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+    <result column="service_type_id" jdbcType="INTEGER" property="serviceTypeId" />
+    <result column="channel_id" jdbcType="INTEGER" property="channelId" />
+    <result column="car_level_id" jdbcType="INTEGER" property="carLevelId" />
+    <result column="lowest_price" jdbcType="DOUBLE" property="lowestPrice" />
+    <result column="base_price" jdbcType="DOUBLE" property="basePrice" />
+    <result column="base_kilo" jdbcType="DOUBLE" property="baseKilo" />
+    <result column="base_minutes" jdbcType="DOUBLE" property="baseMinutes" />
+    <result column="per_kilo_price" jdbcType="DOUBLE" property="perKiloPrice" />
+    <result column="per_minute_price" jdbcType="DOUBLE" property="perMinutePrice" />
+    <result column="beyond_start_kilo" jdbcType="DOUBLE" property="beyondStartKilo" />
+    <result column="beyond_per_kilo_price" jdbcType="DOUBLE" property="beyondPerKiloPrice" />
+    <result column="night_start" jdbcType="TIME" property="nightStart" />
+    <result column="night_end" jdbcType="TIME" property="nightEnd" />
+    <result column="night_per_kilo_price" jdbcType="DOUBLE" property="nightPerKiloPrice" />
+    <result column="night_per_minute_price" jdbcType="DOUBLE" property="nightPerMinutePrice" />
+    <result column="effective_time" jdbcType="TIMESTAMP" property="effectiveTime" />
+    <result column="active_status" jdbcType="INTEGER" property="activeStatus" />
+    <result column="is_unuse" jdbcType="INTEGER" property="isUnuse" />
+    <result column="creator_id" jdbcType="INTEGER" property="creatorId" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, city_code, service_type_id, channel_id, car_level_id, lowest_price, base_price, 
+    base_kilo, base_minutes, per_kilo_price, per_minute_price, beyond_start_kilo, beyond_per_kilo_price, 
+    night_start, night_end, night_per_kilo_price, night_per_minute_price, effective_time, 
+    active_status, is_unuse, creator_id, operator_id, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_charge_rule
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tbl_charge_rule
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.ChargeRule" useGeneratedKeys="true">
+    insert into tbl_charge_rule (city_code, service_type_id, channel_id, 
+      car_level_id, lowest_price, base_price, 
+      base_kilo, base_minutes, per_kilo_price, 
+      per_minute_price, beyond_start_kilo, beyond_per_kilo_price, 
+      night_start, night_end, night_per_kilo_price, 
+      night_per_minute_price, effective_time, active_status, 
+      is_unuse, creator_id, operator_id, 
+      create_time, update_time)
+    values (#{cityCode,jdbcType=VARCHAR}, #{serviceTypeId,jdbcType=INTEGER}, #{channelId,jdbcType=INTEGER}, 
+      #{carLevelId,jdbcType=INTEGER}, #{lowestPrice,jdbcType=DOUBLE}, #{basePrice,jdbcType=DOUBLE}, 
+      #{baseKilo,jdbcType=DOUBLE}, #{baseMinutes,jdbcType=DOUBLE}, #{perKiloPrice,jdbcType=DOUBLE}, 
+      #{perMinutePrice,jdbcType=DOUBLE}, #{beyondStartKilo,jdbcType=DOUBLE}, #{beyondPerKiloPrice,jdbcType=DOUBLE}, 
+      #{nightStart,jdbcType=TIME}, #{nightEnd,jdbcType=TIME}, #{nightPerKiloPrice,jdbcType=DOUBLE}, 
+      #{nightPerMinutePrice,jdbcType=DOUBLE}, #{effectiveTime,jdbcType=TIMESTAMP}, #{activeStatus,jdbcType=INTEGER}, 
+      #{isUnuse,jdbcType=INTEGER}, #{creatorId,jdbcType=INTEGER}, #{operatorId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.onlinetaxi.entity.ChargeRule" useGeneratedKeys="true">
+    insert into tbl_charge_rule
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cityCode != null">
+        city_code,
+      </if>
+      <if test="serviceTypeId != null">
+        service_type_id,
+      </if>
+      <if test="channelId != null">
+        channel_id,
+      </if>
+      <if test="carLevelId != null">
+        car_level_id,
+      </if>
+      <if test="lowestPrice != null">
+        lowest_price,
+      </if>
+      <if test="basePrice != null">
+        base_price,
+      </if>
+      <if test="baseKilo != null">
+        base_kilo,
+      </if>
+      <if test="baseMinutes != null">
+        base_minutes,
+      </if>
+      <if test="perKiloPrice != null">
+        per_kilo_price,
+      </if>
+      <if test="perMinutePrice != null">
+        per_minute_price,
+      </if>
+      <if test="beyondStartKilo != null">
+        beyond_start_kilo,
+      </if>
+      <if test="beyondPerKiloPrice != null">
+        beyond_per_kilo_price,
+      </if>
+      <if test="nightStart != null">
+        night_start,
+      </if>
+      <if test="nightEnd != null">
+        night_end,
+      </if>
+      <if test="nightPerKiloPrice != null">
+        night_per_kilo_price,
+      </if>
+      <if test="nightPerMinutePrice != null">
+        night_per_minute_price,
+      </if>
+      <if test="effectiveTime != null">
+        effective_time,
+      </if>
+      <if test="activeStatus != null">
+        active_status,
+      </if>
+      <if test="isUnuse != null">
+        is_unuse,
+      </if>
+      <if test="creatorId != null">
+        creator_id,
+      </if>
+      <if test="operatorId != null">
+        operator_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cityCode != null">
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceTypeId != null">
+        #{serviceTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="channelId != null">
+        #{channelId,jdbcType=INTEGER},
+      </if>
+      <if test="carLevelId != null">
+        #{carLevelId,jdbcType=INTEGER},
+      </if>
+      <if test="lowestPrice != null">
+        #{lowestPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="basePrice != null">
+        #{basePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="baseKilo != null">
+        #{baseKilo,jdbcType=DOUBLE},
+      </if>
+      <if test="baseMinutes != null">
+        #{baseMinutes,jdbcType=DOUBLE},
+      </if>
+      <if test="perKiloPrice != null">
+        #{perKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="perMinutePrice != null">
+        #{perMinutePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="beyondStartKilo != null">
+        #{beyondStartKilo,jdbcType=DOUBLE},
+      </if>
+      <if test="beyondPerKiloPrice != null">
+        #{beyondPerKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="nightStart != null">
+        #{nightStart,jdbcType=TIME},
+      </if>
+      <if test="nightEnd != null">
+        #{nightEnd,jdbcType=TIME},
+      </if>
+      <if test="nightPerKiloPrice != null">
+        #{nightPerKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="nightPerMinutePrice != null">
+        #{nightPerMinutePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="effectiveTime != null">
+        #{effectiveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="activeStatus != null">
+        #{activeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isUnuse != null">
+        #{isUnuse,jdbcType=INTEGER},
+      </if>
+      <if test="creatorId != null">
+        #{creatorId,jdbcType=INTEGER},
+      </if>
+      <if test="operatorId != null">
+        #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlinetaxi.entity.ChargeRule">
+    update tbl_charge_rule
+    <set>
+      <if test="cityCode != null">
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceTypeId != null">
+        service_type_id = #{serviceTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="channelId != null">
+        channel_id = #{channelId,jdbcType=INTEGER},
+      </if>
+      <if test="carLevelId != null">
+        car_level_id = #{carLevelId,jdbcType=INTEGER},
+      </if>
+      <if test="lowestPrice != null">
+        lowest_price = #{lowestPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="basePrice != null">
+        base_price = #{basePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="baseKilo != null">
+        base_kilo = #{baseKilo,jdbcType=DOUBLE},
+      </if>
+      <if test="baseMinutes != null">
+        base_minutes = #{baseMinutes,jdbcType=DOUBLE},
+      </if>
+      <if test="perKiloPrice != null">
+        per_kilo_price = #{perKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="perMinutePrice != null">
+        per_minute_price = #{perMinutePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="beyondStartKilo != null">
+        beyond_start_kilo = #{beyondStartKilo,jdbcType=DOUBLE},
+      </if>
+      <if test="beyondPerKiloPrice != null">
+        beyond_per_kilo_price = #{beyondPerKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="nightStart != null">
+        night_start = #{nightStart,jdbcType=TIME},
+      </if>
+      <if test="nightEnd != null">
+        night_end = #{nightEnd,jdbcType=TIME},
+      </if>
+      <if test="nightPerKiloPrice != null">
+        night_per_kilo_price = #{nightPerKiloPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="nightPerMinutePrice != null">
+        night_per_minute_price = #{nightPerMinutePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="effectiveTime != null">
+        effective_time = #{effectiveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="activeStatus != null">
+        active_status = #{activeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isUnuse != null">
+        is_unuse = #{isUnuse,jdbcType=INTEGER},
+      </if>
+      <if test="creatorId != null">
+        creator_id = #{creatorId,jdbcType=INTEGER},
+      </if>
+      <if test="operatorId != null">
+        operator_id = #{operatorId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlinetaxi.entity.ChargeRule">
+    update tbl_charge_rule
+    set city_code = #{cityCode,jdbcType=VARCHAR},
+      service_type_id = #{serviceTypeId,jdbcType=INTEGER},
+      channel_id = #{channelId,jdbcType=INTEGER},
+      car_level_id = #{carLevelId,jdbcType=INTEGER},
+      lowest_price = #{lowestPrice,jdbcType=DOUBLE},
+      base_price = #{basePrice,jdbcType=DOUBLE},
+      base_kilo = #{baseKilo,jdbcType=DOUBLE},
+      base_minutes = #{baseMinutes,jdbcType=DOUBLE},
+      per_kilo_price = #{perKiloPrice,jdbcType=DOUBLE},
+      per_minute_price = #{perMinutePrice,jdbcType=DOUBLE},
+      beyond_start_kilo = #{beyondStartKilo,jdbcType=DOUBLE},
+      beyond_per_kilo_price = #{beyondPerKiloPrice,jdbcType=DOUBLE},
+      night_start = #{nightStart,jdbcType=TIME},
+      night_end = #{nightEnd,jdbcType=TIME},
+      night_per_kilo_price = #{nightPerKiloPrice,jdbcType=DOUBLE},
+      night_per_minute_price = #{nightPerMinutePrice,jdbcType=DOUBLE},
+      effective_time = #{effectiveTime,jdbcType=TIMESTAMP},
+      active_status = #{activeStatus,jdbcType=INTEGER},
+      is_unuse = #{isUnuse,jdbcType=INTEGER},
+      creator_id = #{creatorId,jdbcType=INTEGER},
+      operator_id = #{operatorId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="getChargeRule" resultMap="BaseResultMap">
+    select
+      *
+    from tbl_charge_rule
+    where city_code = #{cityCode} and car_level_id = #{carLevel} and service_type_id = #{serviceTypeId} limit 1
+  </select>
+
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.online.taxi.entity.ChargeRule">
+    <!--
+      WARNING - @mbggenerated
+      This element is automatically generated by MyBatis Generator, do not modify.
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    from tbl_charge_rule
+    where city_code =#{cityCode,jdbcType=VARCHAR} and service_type_id= #{serviceTypeId,jdbcType=INTEGER} and
+    channel_id = #{channelId,jdbcType=INTEGER} and car_level_id = #{carLevelId,jdbcType=INTEGER}
+    and active_status = 1 and is_unuse=0 and effective_time <![CDATA[<]]> NOW()
+    order by effective_time desc
+    limit 1
+  </select>
+
+</mapper>

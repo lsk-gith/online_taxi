@@ -1,6 +1,7 @@
 package com.online.taxi.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import lombok.Data;
 
@@ -35,42 +36,42 @@ public class ChargeRule implements Serializable {
     /**
      * 基础价
      */
-    private Double lowestPrice;
+    private BigDecimal lowestPrice;
 
     /**
      * 起步价
      */
-    private Double basePrice;
+    private BigDecimal basePrice;
 
     /**
      * 基础价格包含公里数
      */
-    private Double baseKilo;
+    private BigDecimal baseKilo;
 
     /**
      * 基础价格包含时长数(分钟)
      */
-    private Double baseMinutes;
+    private BigDecimal baseMinutes;
 
     /**
      * 超公里单价(每公里单价)
      */
-    private Double perKiloPrice;
+    private BigDecimal perKiloPrice;
 
     /**
      * 超时间单价(每分钟单价)
      */
-    private Double perMinutePrice;
+    private BigDecimal perMinutePrice;
 
     /**
      * 远途起算公里
      */
-    private Double beyondStartKilo;
+    private BigDecimal beyondStartKilo;
 
     /**
      * 远途单价
      */
-    private Double beyondPerKiloPrice;
+    private BigDecimal beyondPerKiloPrice;
 
     /**
      * 夜间时间段开始
@@ -85,12 +86,12 @@ public class ChargeRule implements Serializable {
     /**
      * 夜间超公里加收单价
      */
-    private Double nightPerKiloPrice;
+    private BigDecimal nightPerKiloPrice;
 
     /**
      * 夜间超时间加收单价
      */
-    private Double nightPerMinutePrice;
+    private BigDecimal nightPerMinutePrice;
 
     /**
      * 生效时间

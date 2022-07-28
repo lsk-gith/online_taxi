@@ -14,6 +14,7 @@
         <module name="api-demo" />
         <module name="dispatch-service" />
         <module name="api-listen-order" />
+        <module name="order-service" />
         <module name="service-order" />
         <module name="account-service" />
         <module name="internal-service" />
@@ -30,6 +31,7 @@
       <module name="dispatch-service" target="1.8" />
       <module name="internal-service" target="1.8" />
       <module name="online-taxi-my" target="1.8" />
+      <module name="order-service" target="1.8" />
       <module name="service-order" target="1.8" />
       <module name="service-verification-code" target="1.8" />
       <module name="test" target="1.8" />
@@ -46,6 +48,7 @@
       <module name="dispatch-service" options="-parameters" />
       <module name="internal-service" options="-parameters" />
       <module name="online-taxi-my" options="-parameters" />
+      <module name="order-service" options="-parameters" />
       <module name="service-order" options="-parameters" />
       <module name="service-verification-code" options="-parameters" />
       <module name="test" options="-parameters" />
