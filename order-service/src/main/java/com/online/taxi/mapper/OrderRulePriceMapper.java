@@ -14,7 +14,7 @@ public interface OrderRulePriceMapper {
 
     int insertSelective(OrderRulePrice record);
 
-    OrderRulePrice selectByPrimaryKey(Integer id);
+    OrderRulePrice selectByPrimaryKey(Integer id, int code);
 
     int updateByPrimaryKeySelective(OrderRulePrice record);
 

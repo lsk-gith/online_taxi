@@ -4,7 +4,7 @@ import com.online.taxi.cosntant.AmapOrderEnum;
 import com.online.taxi.cosntant.BusinessInterfaceStatus;
 import com.online.taxi.cosntant.OrderEnum;
 import com.online.taxi.cosntant.OrderStatusEnum;
-import com.online.taxi.dto.ChargeRuleDao;
+import com.online.taxi.dao.ChargeRuleDao;
 import com.online.taxi.dto.ResponseResult;
 import com.online.taxi.dto.map.request.DistanceRequest;
 import com.online.taxi.dto.map.request.RouteRequest;

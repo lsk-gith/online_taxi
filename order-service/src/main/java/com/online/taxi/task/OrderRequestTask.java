@@ -1,15 +1,20 @@
 package com.online.taxi.task;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.online.taxi.cosntant.BusinessInterfaceStatus;
 import com.online.taxi.cosntant.EnableDisableEnum;
 import com.online.taxi.cosntant.OrderEnum;
+import com.online.taxi.cosntant.OrderStatusEnum;
 import com.online.taxi.dto.BaseInfoDto;
 import com.online.taxi.dto.ResponseResult;
-import com.online.taxi.entity.CarLevel;
-import com.online.taxi.entity.Channel;
-import com.online.taxi.entity.City;
-import com.online.taxi.entity.ServiceType;
+import com.online.taxi.dto.map.Points;
+import com.online.taxi.dto.map.request.RouteRequest;
+import com.online.taxi.dto.valuation.charging.KeyRule;
+import com.online.taxi.dto.valuation.charging.Rule;
+import com.online.taxi.entity.*;
 import com.online.taxi.mapper.*;
 import com.online.taxi.request.OrderDtoRequest;
+import com.online.taxi.util.RestTemplateHepler;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -95,7 +100,95 @@ public class OrderRequestTask {
         return ResponseResult.success(baseInfoDto);
 
     }
+    /**
+     * 手机号解绑与更新orderPoint
+     * @param status
+     * @param newOrder
+     * @return
+     */
+    public ResponseResult phoneUnbindAndInsertOrderPoint(Integer status, Order newOrder, Integer cancel){
+        ResponseResult responseResult;
+        if(null != status){
+            if(OrderStatusEnum.STATUS_DRIVER_TRAVEL_END.getCode() == status.intValue()){
+                OrderRuleMirror orderRuleMirror = orderRuleMirrorMapper.selectByPrimaryKey(newOrder.getId());
+                String originalRule = orderRuleMirror.getRule();
+                Rule rule = parse(originalRule, Rule.class);
+                KeyRule keyRule = rule.getKeyRule();
+                //查询车辆轨迹点
+                RouteRequest routeRequest = new RouteRequest();
+                routeRequest.setVehicleId(newOrder.getCarId().toString());
+                routeRequest.setCity(keyRule.getCityCode());
+                routeRequest.setStartTime(newOrder.getReceivePassengerTime().getTime());
+                routeRequest.setEndTime(newOrder.getPassengerGetoffTime().getTime());
+                routeRequest.setCorrection("origin");
+                responseResult = otherInterfaceTask.selectVehiclePoints(routeRequest);
+                if(BusinessInterfaceStatus.SUCCESS.getCode() != responseResult.getCode())
+                    return responseResult;
+                try {
+                    Points points = RestTemplateHepler.parse(responseResult, Points.class);
+                    OrderPoints orderPoints = new OrderPoints();
+                    orderPoints.setDriverId(newOrder.getDriverId());
+                    orderPoints.setCarId(newOrder.getCarId());
+                    orderPoints.setOrderId(newOrder.getId());
+                    orderPoints.setPoints(new ObjectMapper().writeValueAsString(points.getPoints()));
+                    orderPointsMapper.insertSelective(orderPoints);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
 
+            }
+
+        }
+
+        if(null != status || null != cancel){
+            if(null != status){
+                if(OrderStatusEnum.STATUS_PAY_END.getCode() == status.intValue())
+                    if(null != newOrder.getMappingNumber()){
+                        try {
+                            otherInterfaceTask.phoneNumberUnbind(newOrder.getMappingId(), newOrder.getMappingNumber());
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+//                if(newOrder.getOrderType() == OrderEnum.ORDER_TYPE_OTHER.getCode()){
+//                    if(null != newOrder.getOtherMappingId())
+//                }
+            }
+
+//            if(null != cancel){
+//                if(OrderEnum.IS_CANCEL.getCode() == cancel.intValue()){
+//
+//                }
+//            }
+
+
+        }
+
+        return ResponseResult.success(null);
+    }
+
+
+
+
+    /**
+     * 字符串转实体类
+     *
+     * @param jsonStr
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    public static<T> T parse(String jsonStr, Class<T> clazz){
+        ObjectMapper om = new ObjectMapper();
+        T readValue = null;
+        try {
+            readValue = om.readValue(jsonStr, clazz);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return readValue;
+    }
 
 
 }

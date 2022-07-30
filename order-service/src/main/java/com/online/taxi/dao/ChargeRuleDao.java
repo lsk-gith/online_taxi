@@ -1,4 +1,4 @@
-package com.online.taxi.dto;
+package com.online.taxi.dao;
 
 import com.online.taxi.dto.valuation.charging.TagPrice;
 import com.online.taxi.entity.ChargeRule;
