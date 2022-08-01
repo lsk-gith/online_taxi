@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/dispatch-service/dispatch-service.iml" filepath="$PROJECT_DIR$/dispatch-service/dispatch-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/internal-service/internal-service.iml" filepath="$PROJECT_DIR$/internal-service/internal-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-service/netty-service.iml" filepath="$PROJECT_DIR$/netty-service/netty-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/online-taxi-my.iml" filepath="$PROJECT_DIR$/online-taxi-my.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-order/service-order.iml" filepath="$PROJECT_DIR$/service-order/service-order.iml" />

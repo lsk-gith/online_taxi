@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-verification-code" />
+        <module name="test" />
+        <module name="dispatch-service" />
+        <module name="service-order" />
+        <module name="api-driver" />
         <module name="api-passager" />
         <module name="common" />
-        <module name="test" />
+        <module name="netty-service" />
         <module name="api-demo" />
-        <module name="dispatch-service" />
         <module name="api-listen-order" />
         <module name="order-service" />
-        <module name="service-order" />
         <module name="account-service" />
         <module name="internal-service" />
-        <module name="api-driver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="common" target="1.8" />
       <module name="dispatch-service" target="1.8" />
       <module name="internal-service" target="1.8" />
+      <module name="netty-service" target="1.8" />
       <module name="online-taxi-my" target="1.8" />
       <module name="order-service" target="1.8" />
       <module name="service-order" target="1.8" />
@@ -47,6 +49,7 @@
       <module name="common" options="-parameters" />
       <module name="dispatch-service" options="-parameters" />
       <module name="internal-service" options="-parameters" />
+      <module name="netty-service" options="-parameters" />
       <module name="online-taxi-my" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="service-order" options="-parameters" />
